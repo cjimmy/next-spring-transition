@@ -2,6 +2,8 @@
 
 This is a minimal demo Next.js app of using `react-spring`, [an animation library](https://www.react-spring.io/), for page transitions.
 
+![GIF of what the demo page looks like](public/example.gif)
+
 👉 See the demo: [next-spring-transition.vercel.app](https://next-spring-transition.vercel.app/)
 
 ## Animations
