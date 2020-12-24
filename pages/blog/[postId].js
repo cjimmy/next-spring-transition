@@ -17,6 +17,7 @@ export default function Home() {
   const bodyAnimRef = useRef();
 
   // Simple and sweet spring animation for the title
+  // `reverse` allows us to run the animation in reverse with a state change
   const titleProps = useSpring({
     config: config.stiff,
     ref: titleAnimRef,

@@ -19,6 +19,7 @@ function MyApp({ Component, pageProps }) {
   }, [router]);
 
   // Global zoom effect on each page transition
+  // tbh, as a designer, I wouldn't use this animation for real
   const transitions = useTransition(items, (item) => item.id, {
     config: config.slow,
     from: { transform: `scale(1.1)` },
@@ -27,7 +28,7 @@ function MyApp({ Component, pageProps }) {
   });
 
   return (
-    <div style={{ position: 'relative' }}>
+    <div style={{ position: 'relative', overflow: 'hidden' }}>
       {transitions.map(({ item, props, key }) => {
         const { Component, pageProps } = item;
         return (

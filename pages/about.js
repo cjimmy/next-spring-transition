@@ -6,6 +6,13 @@ import { useSpring, useChain, animated, config } from 'react-spring';
 import { useRouter } from 'next/router';
 import { ListTrailAnimation } from '../components/animations';
 
+/**
+ * pages/index.js, pages/about.js, and pages/blog/[postId].js are all pretty much identical.
+ * This is not good practice, obviously, and is intentional. The common code they share can
+ * be abstracted out, but it's left in the same file to keep it more readable. (i.e.
+ * you can look at any one of the files to understand how the transitions are working).
+ * One animation is abstracted out to components/animations/index.js as an example.
+ * */
 export default function Home() {
   const router = useRouter();
   const [isEntry, setIsEntry] = useState(true);
@@ -17,6 +24,8 @@ export default function Home() {
   const bodyAnimRef = useRef();
 
   // Simple and sweet spring animation for the title
+  // Because the title animation is the last animation
+  // when leaving a page, we put the onRest handler on this one
   const titleProps = useSpring({
     config: config.stiff,
     ref: titleAnimRef,
@@ -46,6 +55,11 @@ export default function Home() {
     isEntry ? [0.0, 0.3, 0.8] : [0.0, 0.3, 0.5]
   );
 
+  /**
+   * What would be better is if we didn't have to create a function
+   * that we need to use for route changes, but this is the best
+   * solution I can think of.
+   * */
   const pushRoute = (url) => {
     // reverse the animation sequence
     setIsEntry(false);
