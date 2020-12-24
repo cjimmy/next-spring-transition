@@ -1,10 +1,10 @@
 import React, { useState, useRef } from 'react';
 import Head from 'next/head';
-import styles from '../styles/Home.module.css';
-import Footer from '../components/Footer';
+import styles from '../../styles/Home.module.css';
+import Footer from '../../components/Footer';
 import { useSpring, useChain, animated, config } from 'react-spring';
 import { useRouter } from 'next/router';
-import { ListTrailAnimation } from '../components/animations';
+import { ListTrailAnimation } from '../../components/animations';
 
 export default function Home() {
   const router = useRouter();
@@ -76,7 +76,7 @@ export default function Home() {
             ),
           }}
         >
-          Next.js + React Spring
+          Dynamic page: Blog Post
         </animated.h1>
 
         <div style={{ overflow: 'hidden' }}>

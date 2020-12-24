@@ -76,7 +76,7 @@ export default function Home() {
             ),
           }}
         >
-          Next.js + React Spring
+          The About Page
         </animated.h1>
 
         <div style={{ overflow: 'hidden' }}>

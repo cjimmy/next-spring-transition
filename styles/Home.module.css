@@ -8,7 +8,7 @@
 }
 
 .main {
-  padding: 5rem 0;
+  padding: 1rem 0;
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -58,6 +58,8 @@
 }
 
 .description {
+  overflow: hidden;
+  white-space: pre;
   line-height: 1.5;
   font-size: 1.5rem;
 }
@@ -75,15 +77,16 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-wrap: wrap;
-  max-width: 800px;
-  margin-top: 3rem;
+  flex-wrap: nowrap;
+  max-width: 900px;
+  margin-top: 2rem;
 }
 
 .card {
+  display: block;
   margin: 1rem;
-  flex-basis: 45%;
-  padding: 1.5rem;
+  flex-basis: 33%;
+  padding: 1rem;
   text-align: left;
   color: inherit;
   text-decoration: none;
@@ -119,4 +122,12 @@
     width: 100%;
     flex-direction: column;
   }
+}
+
+/* display: flex;
+flex-direction: column;
+align-items: center; */
+.positioner {
+  position: absolute;
+  width: 100%;
 }
