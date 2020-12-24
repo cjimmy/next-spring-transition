@@ -93,11 +93,9 @@ export default function Home() {
         <div className={styles.grid}>
           <ListTrailAnimation ref={bodyAnimRef} reverse={!isEntry}>
             {/* Card 1 */}
-            <div onClick={() => pushRoute('/')}>
-              <a className={styles.card}>
-                <h3>Home &rarr;</h3>
-                <p>Home page, aka /index.js</p>
-              </a>
+            <div className={styles.card}>
+              <h3>Home &rarr;</h3>
+              <p>Home page, aka /index.js</p>
             </div>
 
             {/* Card 2 */}

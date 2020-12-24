@@ -110,11 +110,9 @@ export default function Home() {
             </div>
 
             {/* Card 3 */}
-            <div onClick={() => pushRoute(`/blog/${dynamicSlug}`)}>
-              <a className={styles.card}>
-                <h3>/blog/[postId].js &rarr;</h3>
-                <p>A dynamic route, for example</p>
-              </a>
+            <div className={styles.card}>
+              <h3>/blog/[postId].js &rarr;</h3>
+              <p>A dynamic route, for example</p>
             </div>
           </ListTrailAnimation>
         </div>

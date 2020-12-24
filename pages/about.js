@@ -115,11 +115,9 @@ export default function Home() {
             </div>
 
             {/* Card 2 */}
-            <div onClick={() => pushRoute('/about')}>
-              <a className={styles.card}>
-                <h3>/about &rarr;</h3>
-                <p>Just another route, at the same level</p>
-              </a>
+            <div className={styles.card}>
+              <h3>/about &rarr;</h3>
+              <p>Just another route, at the same level</p>
             </div>
 
             {/* Card 3 */}
